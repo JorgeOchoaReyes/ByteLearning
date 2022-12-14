@@ -4,6 +4,7 @@ import { signIn, signOut } from "next-auth/react";
 import { trpc } from "../utils/trpc";
 import type { inferProcedureOutput } from "@trpc/server";
 import type { AppRouter } from "@acme/api";
+import { Button } from "@acme/ui";
 
 const PostCard: React.FC<{
   post: inferProcedureOutput<AppRouter["post"]["all"]>[number];
@@ -45,6 +46,7 @@ const Home: NextPage = () => {
               <p>Loading..</p>
             )}
           </div>
+          <Button />
         </div>
       </main>
     </>
